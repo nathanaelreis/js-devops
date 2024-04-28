@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <p id="helloMessage"></p>
+
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="somaInteiros()">Somar</button>
+
+    <p id="elementByID">Este é um parágrafo cuja propriedade será alterada.</p>
+
+
+    <input type="text" name="elementByName" placeholder="Digite algo aqui">
+
+
+    <p class="elementByClass">Este é um parágrafo cuja propriedade será alterada pela classe.</p>
+
+    <script>
+        document.getElementById("helloMessage").innerText = "Olá Mundo";
+
+        function somaInteiros() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var resultado = num1 + num2;
+            alert("A soma é: " + resultado);
+        }
+
+        document.getElementById("elementByID").style.color = "blue";
+
+        var elementsByName = document.getElementsByName("elementByName");
+        for (var i = 0; i < elementsByName.length; i++) {
+            elementsByName[i].style.fontWeight = "bold";
+        }
+
+        var elementsByClass = document.getElementsByClassName("elementByClass");
+        for (var i = 0; i < elementsByClass.length; i++) {
+            elementsByClass[i].style.fontStyle = "italic";
+        }
+    </script>
+
+</body>
+
+</html>
